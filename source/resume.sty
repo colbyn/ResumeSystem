@@ -4,23 +4,26 @@
 % Layout
 \usepackage[letterpaper,margin=0.75in]{geometry}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{4pt}
+\setlength{\parskip}{2pt}
 
 % Typography
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} % safe default everywhere
 \usepackage{microtype}
+\sloppy
+\emergencystretch=2em
 
 % Links / PDF metadata
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
-  pdftitle={Your Name - Resume},
-  pdfauthor={Your Name}
+  pdftitle={Colbyn Wadman - Resume},
+  pdfauthor={Colbyn Wadman}
 }
 
 % Lists
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt, parsep=0pt}
+% \setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt, parsep=0pt}
+\setlist[itemize]{leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt, partopsep=0pt}
 
 % Section formatting
 \usepackage{titlesec}
@@ -28,22 +31,44 @@
 \titlespacing*{\section}{0pt}{10pt}{6pt}
 
 % Simple “entry” macros
+% \newcommand{\entry}[4]{%
+%   \textbf{#1}\hfill #2\\%
+%   \textit{#3}\hfill \textit{#4}\\[-2pt]%
+% }
 \newcommand{\entry}[4]{%
-  \textbf{#1}\hfill #2\\%
+  \textbf{#1}%
+  \if\relax\detokenize{#2}\relax%
+  \else\hfill #2%
+  \fi\\%
   \textit{#3}\hfill \textit{#4}\\[-2pt]%
 }
+
 
 % \newcommand{\project}[3]{%
 %   \textbf{#1} \hfill \href{#2}{#2}\\[-2pt]%
 %   #3\\%
 % }
+% \newcommand{\project}[3]{%
+%   \textbf{#1}%
+%   \if\relax\detokenize{#2}\relax\hfill%
+%   \else\hfill \href{#2}{#2}%
+%   \fi\\[-2pt]%
+%   #3\vspace{2pt}%
+% }
 \newcommand{\project}[3]{%
   \textbf{#1}%
-  \if\relax\detokenize{#2}\relax\hfill%
+  \if\relax\detokenize{#2}\relax%
   \else\hfill \href{#2}{#2}%
   \fi\\[-2pt]%
   #3\vspace{2pt}%
 }
 
 
+
 \newcommand{\tightitem}{\itemsep1pt\parskip0pt\parsep0pt}
+
+\newenvironment{tightitemize}{%
+  \begin{itemize}\tightitem
+}{%
+  \end{itemize}
+}

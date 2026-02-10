@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "bfseries",
+        "Colbyn",
+        "emergencystretch",
         "enumitem",
         "fontenc",
         "hidelinks",
@@ -12,9 +14,11 @@
         "lmodern",
         "microtype",
         "newcommand",
+        "newenvironment",
         "parindent",
         "parsep",
         "parskip",
+        "partopsep",
         "pdfauthor",
         "pdftitle",
         "setlength",
@@ -23,12 +27,14 @@
         "textbf",
         "textit",
         "tightitem",
+        "tightitemize",
         "titleformat",
         "titlerule",
         "titlesec",
         "titlespacing",
         "topsep",
         "usepackage",
+        "Wadman",
         "watchexec"
     ]
 }
