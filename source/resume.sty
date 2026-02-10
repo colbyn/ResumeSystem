@@ -1,0 +1,49 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}[2026/02/07 Resume style]
+
+% Layout
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+% Typography
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % safe default everywhere
+\usepackage{microtype}
+
+% Links / PDF metadata
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Your Name - Resume},
+  pdfauthor={Your Name}
+}
+
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt, parsep=0pt}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Simple “entry” macros
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill #2\\%
+  \textit{#3}\hfill \textit{#4}\\[-2pt]%
+}
+
+% \newcommand{\project}[3]{%
+%   \textbf{#1} \hfill \href{#2}{#2}\\[-2pt]%
+%   #3\\%
+% }
+\newcommand{\project}[3]{%
+  \textbf{#1}%
+  \if\relax\detokenize{#2}\relax\hfill%
+  \else\hfill \href{#2}{#2}%
+  \fi\\[-2pt]%
+  #3\vspace{2pt}%
+}
+
+
+\newcommand{\tightitem}{\itemsep1pt\parskip0pt\parsep0pt}
