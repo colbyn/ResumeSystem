@@ -28,17 +28,25 @@
 \section{Skills}
 \input{content/skills}
 
+\section{Postlude}
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}
-  \node[inner sep=0pt, rounded corners=8pt, clip] (img)
-    {\includegraphics[width=\linewidth]{../assets/SubscriptScreenshot.png}};
-  \draw[rounded corners=8pt] (img.south west) rectangle (img.north east);
-\end{tikzpicture}
+    \node[inner sep=0pt, rounded corners=8pt, clip] (img)
+      {\includegraphics[width=\linewidth]{../assets/SubscriptScreenshot.png}};
+    \draw[rounded corners=8pt] (img.south west) rectangle (img.north east);
+  \end{tikzpicture}
+
   \caption{The Subscript Note Taking App}
   \label{fig:photo}
+
+  \captionsetup{justification=centering,font=small}
+  \caption*{%
+    \textit{Web publishing example:}\par
+    \printlink{https://colbyn.github.io/old-school-chem-notes/dev/chemistry-1010---fall-2021/week-14-acids-and-bases.html}\par
+    {\footnotesize (Shown: older build; no light/dark mode and missing later refinements.)}%
+  }
+  \caption{\textsc{Pre-LLM app}; designed, implemented, and iterated the hard way.}
 \end{figure}
-
-
 
 \end{document}
