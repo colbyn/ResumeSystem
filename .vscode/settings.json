@@ -1,14 +1,17 @@
 {
     "cSpell.words": [
         "bfseries",
+        "captionsetup",
         "Colbyn",
         "emergencystretch",
         "enumitem",
         "fontenc",
+        "graphicx",
         "hidelinks",
         "hyperref",
         "hypersetup",
         "itemsep",
+        "labelformat",
         "leftmargin",
         "letterpaper",
         "lmodern",
@@ -28,12 +31,15 @@
         "textit",
         "tightitem",
         "tightitemize",
+        "tikz",
+        "tikzpicture",
         "titleformat",
         "titlerule",
         "titlesec",
         "titlespacing",
         "topsep",
         "usepackage",
+        "usetikzlibrary",
         "Wadman",
         "watchexec"
     ]
